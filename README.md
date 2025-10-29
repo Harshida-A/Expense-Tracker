@@ -114,26 +114,29 @@ I didn't upload the `node_modules` folder as The folder is huge— it can be reg
 ### ✅ Recommended `.gitignore` file:
 
 ```gitignore
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
 # dependencies
-node_modules/
+/node_modules
+/.pnp
+.pnp.js
 
-# production build
-build/
+# testing
+/coverage
 
-# environment files
-.env
-
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# IDE files
-.vscode/
-.idea/
+# production
+/build
 
 # misc
 .DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 ```
 
 To clean your repo:
