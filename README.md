@@ -27,7 +27,7 @@ Built using **ReactJS**, **Spring Boot**, and **MongoDB**, this system provides 
 2. Ensure MongoDB is running locally:
    ```bash
    mongod
-````
+    ````
 
 3. Verify your `application.properties` file:
 
