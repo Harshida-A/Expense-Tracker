@@ -1,89 +1,91 @@
 
 
-💰 Expense Tracker Application
+# 💰 Expense Tracker Web Application
 
-An intuitive full-stack web application developed by **Harshida A** , designed to manage and analyze personal income and expenses efficiently.
-This project integrates **ReactJS (Frontend)**, **Spring Boot (Backend)**, and **MongoDB (Database)** to provide a real-time, user-friendly financial management experience.
-
----
-
-## 🚀 Features
-
-* 💵 **Add, Edit, Delete Transactions** – Manage your income and expenses with ease
-* 🧾 **Budget Management** – Set monthly budgets and track progress
-* ☁️ **Data Export** – Export your data in JSON format
-* 🔒 **Secure Storage** – Backend powered by Spring Boot and MongoDB
-* 💻 **Responsive Design** – Works smoothly across devices
+A **full-stack expense management system** that allows users to record, categorize, and analyze their income and expenses in real-time.  
+Built using **ReactJS**, **Spring Boot**, and **MongoDB**, this system provides secure data handling and an intuitive interface.
 
 ---
 
-## 🛠️ Technologies Used
+## 🧩 Tech Stack
 
-| Layer    | Technology               |
-| -------- | ------------------------ |
-| Frontend | ReactJS, Axios, CSS      |
-| Backend  | Spring Boot, Java, Maven |
-| Database | MongoDB                  |
-| Tools    | npm, Maven               |
+| Layer | Technology Used |
+|-------|-----------------|
+| 💻 Frontend | ReactJS |
+| ⚙️ Backend | Spring Boot |
+| 🗄️ Database | MongoDB |
+| 🔤 Languages | Java, JavaScript |
+| 🧰 Tools | Maven, npm, VS Code |
 
+---
 
-**⚙️ Installation & Setup**
+## 🚀 How to Run the Project
 
-1. Clone the Repository
+### 🖥️ Backend (Spring Boot)
 
-```bash
-git clone https://github.com/Harshida-A/Expense-Tracker#
-cd expense-tracker
+1. Open the backend project in **VS Code** or **Eclipse**.  
+2. Ensure MongoDB is running locally:
+   ```bash
+   mongod
+````
 
-2. Start the Backend (Spring Boot)
+3. Verify your `application.properties` file:
 
-✅ Requirements:
+   ```properties
+   spring.data.mongodb.uri=mongodb://localhost:27017/expensio
+   spring.data.mongodb.database=expensio
+   server.port=8080
+   ```
+4. Run the backend server:
 
-* Java 17 or higher
-* Maven installed
-* MongoDB running locally at `mongodb://localhost:27017`
+   open your IDE and **run `ExpenseTrackerApplication.java`**.
 
-#### ▶ Steps:
+5. Backend will be available at 👉 **[http://localhost:8080](http://localhost:8080)**
 
-open your IDE and run `ExpenseTrackerApplication.java`.
+---
 
-3. Start the Frontend (ReactJS)
+### 🌐 Frontend (ReactJS)
 
-✅ Requirements:
+1. Open the frontend folder in **VS Code**.
+2. Install dependencies:
 
-* Node.js and npm installed
+   ```bash
+   npm install
+   ```
+3. Start the frontend app:
 
-#### ▶ Steps:
+   ```bash
+   npm start
+   ```
+4. React app will run at 👉 **[http://localhost:3000](http://localhost:3000)**
 
+---
 
-cd frontend
-npm install
-npm start
+## 🔗 Connecting Frontend and Backend
 
+In your React project, open
+`/src/services/api.js`
+and make sure the base URL matches your backend:
 
-Frontend runs on **[http://localhost:3000](http://localhost:3000)**
-
-
-4. Connect Frontend and Backend
-
-In your frontend folder, open:
-`src/services/api.js`
-
-Make sure the backend API base URL is correct:
-
-javascript
+```javascript
 const BASE_URL = "http://localhost:8080/api";
+```
 
+---
 
-5. Run the App
+## 🧾 Project Features
 
-Once both servers are running:
-🔗 Visit **[http://localhost:3000](http://localhost:3000)** in your browser
-You can now add income, expenses, and budgets in real time!
+* ✅ Add, view, and delete income/expense transactions
+* 📊 Set and manage monthly budgets
+* 📈 Real-time dashboard visualization
+* 💾 Export all financial data as JSON
+* ⚡ Fast, responsive, and user-friendly interface
 
+---
 
-🧠 Folder Structure
+## 🧱 Folder Structure
 
+```
 expense-tracker/
 │
 ├── backend/
@@ -102,17 +104,76 @@ expense-tracker/
 │
 └── README.md
 
+```
 
-🌟 Future Enhancements
-
-* 🔐 Add user authentication (JWT login system)
-* 📈 Advanced analytics with custom time filters
-* ☁️ Connect to MongoDB Atlas (cloud)
-* 🎨 Add dark/light theme toggle for UI customization
+---
 
 
-🧾 License
+I didn't upload the `node_modules` folder as The folder is huge— it can be regenerated using `npm install`.
 
-Developed by Harshida A for educational and personal use.
+### ✅ Recommended `.gitignore` file:
+
+```gitignore
+# dependencies
+node_modules/
+
+# production build
+build/
+
+# environment files
+.env
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE files
+.vscode/
+.idea/
+
+# misc
+.DS_Store
+```
+
+To clean your repo:
+
+```bash
+git rm -r --cached node_modules
+git add .
+git commit -m "Added .gitignore and removed node_modules"
+git push
+```
+
+---
+
+## 🔐 Security & Performance
+
+* Uses **MongoDB** for reliable and scalable data management
+* **Spring Boot REST APIs** ensure efficient communication
+* Lightweight, responsive **ReactJS** frontend for smooth performance
+
+---
+
+## 🌟 Future Enhancements
+
+* 🔑 User authentication (login/signup)
+* 📅 Monthly and category-based analytics
+* ☁️ Cloud data sync
+* 📄 Export to PDF and Excel
+
+---
+
+## 👩‍💻 Author
+
+**Harshida A**
+🎓 Computer Science Engineering Student
+💻 Passionate about full-stack web development
+
+---
+
+## 🏁 Conclusion
+
+The Expense Tracker simplifies personal finance management through automation, analytics, and accessibility — empowering users to make smarter financial decisions with a clean, modern interface.
 
 
