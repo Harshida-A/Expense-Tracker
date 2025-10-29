@@ -32,8 +32,8 @@ Built using **ReactJS**, **Spring Boot**, and **MongoDB**, this system provides 
 3. Verify your `application.properties` file:
 
    ```properties
-   spring.data.mongodb.uri=mongodb://localhost:27017/expensio
-   spring.data.mongodb.database=expensio
+   spring.data.mongodb.uri=mongodb://localhost:27017/expense_tracker
+   spring.data.mongodb.database=expense_tracker
    server.port=8080
    ```
 4. Run the backend server:
