@@ -1,70 +1,118 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+💰 Expense Tracker Application
 
-In the project directory, you can run:
+An intuitive full-stack web application developed by **Harshida A** , designed to manage and analyze personal income and expenses efficiently.
+This project integrates **ReactJS (Frontend)**, **Spring Boot (Backend)**, and **MongoDB (Database)** to provide a real-time, user-friendly financial management experience.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* 💵 **Add, Edit, Delete Transactions** – Manage your income and expenses with ease
+* 🧾 **Budget Management** – Set monthly budgets and track progress
+* ☁️ **Data Export** – Export your data in JSON format
+* 🔒 **Secure Storage** – Backend powered by Spring Boot and MongoDB
+* 💻 **Responsive Design** – Works smoothly across devices
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Technologies Used
 
-### `npm run build`
+| Layer    | Technology               |
+| -------- | ------------------------ |
+| Frontend | ReactJS, Axios, CSS      |
+| Backend  | Spring Boot, Java, Maven |
+| Database | MongoDB                  |
+| Tools    | npm, Maven               |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**⚙️ Installation & Setup**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the Repository
 
-### `npm run eject`
+```bash
+git clone https://github.com/Harshida-A/Expense-Tracker#
+cd expense-tracker
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Start the Backend (Spring Boot)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+✅ Requirements:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Java 17 or higher
+* Maven installed
+* MongoDB running locally at `mongodb://localhost:27017`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### ▶ Steps:
 
-## Learn More
+open your IDE and run `ExpenseTrackerApplication.java`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Start the Frontend (ReactJS)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+✅ Requirements:
 
-### Code Splitting
+* Node.js and npm installed
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### ▶ Steps:
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+cd frontend
+npm install
+npm start
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Frontend runs on **[http://localhost:3000](http://localhost:3000)**
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. Connect Frontend and Backend
 
-### Deployment
+In your frontend folder, open:
+`src/services/api.js`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Make sure the backend API base URL is correct:
 
-### `npm run build` fails to minify
+javascript
+const BASE_URL = "http://localhost:8080/api";
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+5. Run the App
+
+Once both servers are running:
+🔗 Visit **[http://localhost:3000](http://localhost:3000)** in your browser
+You can now add income, expenses, and budgets in real time!
+
+
+🧠 Folder Structure
+
+expense-tracker/
+│
+├── backend/
+│   ├── src/
+│   ├── pom.xml
+│   └── ExpenseTrackerApplication.java
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── services/
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── package.json
+│   └── public/
+│
+└── README.md
+
+
+🌟 Future Enhancements
+
+* 🔐 Add user authentication (JWT login system)
+* 📈 Advanced analytics with custom time filters
+* ☁️ Connect to MongoDB Atlas (cloud)
+* 🎨 Add dark/light theme toggle for UI customization
+
+
+🧾 License
+
+Developed by Harshida A for educational and personal use.
+
+
